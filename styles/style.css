@@ -24,13 +24,6 @@
   	font-family: "open noah";
 }
 
-
-
-/*********************/
-/* CUSTOM PROPERTIES */
-/*********************/
-
-
 /****************/
 /* JOUW STYLING */
 /****************/
@@ -38,11 +31,17 @@
 
 /*Main section 1 start BIG CITY*/
 
+main section:nth-of-type(1) {
+	display: flex;
+	flex-direction: column;
+}
+
 main section:nth-of-type(1) img {
   height: 24em;
   width: 100%;
   object-fit: cover;
   object-position: 40% 15%;
+  order: -1
 }
 
 main section:nth-of-type(1) h2 {
@@ -81,6 +80,8 @@ main section:nth-of-type(2) li {
 	flex-shrink:0;	
 	position:relative;
 	margin:calc( var(--whitespace) * 0.5);
+	display: flex;
+	flex-direction: column;
 }
 
 
@@ -92,6 +93,10 @@ main section:nth-of-type(2) li a > img:nth-of-type(1) {
 main section:nth-of-type(2) li a {
 	color: var(--color-text);
 	text-decoration: none;
+}
+
+main section:nth-of-type(2) li a:nth-of-type(2) {
+	order: -1;
 }
 
 main section:nth-of-type(2) button img {
@@ -133,6 +138,13 @@ main section:nth-of-type(3) ul {
 	padding: 0;
 }
 
+
+main section:nth-of-type(3) li {
+	flex-shrink:0;
+	/* display: flex;
+	flex-direction: column; */
+}
+
 main section:nth-of-type(3) ul li a {
 	display: grid;
 	text-decoration: none;
@@ -145,6 +157,8 @@ main section:nth-of-type(3) ul li img {
 	grid-row-end: 3;
 	grid-column-start: 1;
 	grid-column-end: 1;
+	max-width: 13em;
+	height: 13em;
 }
 
 main section:nth-of-type(3) ul li h3 {
@@ -158,17 +172,9 @@ main section:nth-of-type(3) ul li h3 {
 	padding-right: .5em;
 	padding-left: .5em;
 	margin: .5em;
+	z-index: 1;
 }
 
-
-main section:nth-of-type(3) li {
-	flex-shrink:0;
-}
-
-main section:nth-of-type(3) li img {
-	max-width: 13em;
-	height: 13em;
-}
 
 /*Main section 3 eind*/
 
@@ -200,13 +206,15 @@ main article:nth-of-type(1) ul li h3 {
 
 main article:nth-of-type(1) ul a {
 	text-decoration: none;
+	display: flex;
+	flex-direction: column;
 }
-
 
 main article:nth-of-type(1) ul li img {
 	border-radius: 5% 5% 0% 0%;
 	width: 10em;
 	height: auto;
+	order: -1;
 }
 
 /*Main article 1 eind*/
@@ -228,14 +236,12 @@ main section:nth-of-type(4) p {
 
 main section:nth-of-type(4) ul:first-of-type {
 	list-style-type: none;
-	/* position: absolute; */
 	padding: 0;
 	overflow-x: scroll;
 	white-space: nowrap;
-	top: 3em;
 
 	grid-row-start: 3;
-	grid-row-end: 4;
+	grid-row-end: 5;
 	grid-column-start: 1;
 	grid-column-end: 2;
 }
@@ -250,49 +256,17 @@ main section:nth-of-type(4) ul:first-of-type img {
 	height: 25em;
 }
 
-/*Help met animatie van Jared Penner*/
-/*Het werkt alleen 1 kant op, hoezo is dit?*/
-
-main section:nth-of-type(4) ul:first-of-type li:first-of-type {
-	/* position: relative; */
-	animation-name: autocarrousel1;
-	animation-duration: 10s;
-	animation-iteration-count: infinite;
-}
-
-/* @keyframes autocarrousel1 {
-	0%   {left:0vw; top:0vw;}
-	30%  {left:0vw; top:0vw;}
-	66%  {left:-100vw; top:0vw;}
-	96%  {left:-100vw; top:0vw;}
-} */
-
-main section:nth-of-type(4) ul:first-of-type li:nth-of-type(2) {
-	/* position: relative; */
-	animation-name: autocarrousel2;
-	animation-duration: 10s;
-	animation-iteration-count: infinite;
-}
-
-/* @keyframes autocarrousel2 {
-	0%   {left:0vw; top:0vw;}
-	30%  {left:0vw; top:0vw;}
-	66%  {left:-100vw; top:0vw;}
-	96%  {left:-100vw; top:0vw;}
-} */
-
 
 main section:nth-of-type(4) ul:nth-of-type(2) {
 	display:flex;
 	list-style: none;
 	overflow-x: scroll;
 	scrollbar-width: none;
-	margin-top: 10em; /*hoe fix ik dit?*/
 	padding: 0; 
   	gap:var(--whitespace);
 
-	grid-row-start: 3;
-	grid-row-end: 4;
+	grid-row-start: 4;
+	grid-row-end: 6;
 	grid-column-start: 1;
 	grid-column-end: 2;
 }
@@ -301,6 +275,8 @@ main section:nth-of-type(4) ul:nth-of-type(2) li {
 	flex-shrink:0;	
 	position: relative;
 	margin:calc( var(--whitespace) * 0.5);
+	display: flex;
+ 	flex-direction: column;
 }
 
 main section:nth-of-type(4) ul:nth-of-type(2) a img {
@@ -311,6 +287,10 @@ main section:nth-of-type(4) ul:nth-of-type(2) a img {
 main section:nth-of-type(4) ul:nth-of-type(2) a {
 	color: var(--color-text);
 	text-decoration: none;
+}
+
+main section:nth-of-type(4) ul:nth-of-type(2) a:nth-of-type(2){
+	order: -1;
 }
 
 main section:nth-of-type(4) ul:nth-of-type(2) h3 {
@@ -357,6 +337,7 @@ main section:nth-of-type(4) > a:hover {
 /*Main section 4 eind*/
 
 
+
 @media (min-width:52em)  {
 
 main {
@@ -364,7 +345,6 @@ main {
 	margin-right:var(--whitespace);
 }
 
-/*HIER BEN JE BEZIG NOAH JIJ GOZER JIJ MAKKER*/
 
 main section:nth-of-type(1) {
 	display:grid;
@@ -430,7 +410,6 @@ article:nth-of-type(1) ul li img {
   	height: auto;
 }
 
-/*hoe fix ik de animatie*/
 
 main section:nth-of-type(4) ul:first-of-type img{
 	width: 20em;
@@ -441,7 +420,6 @@ main section:nth-of-type(4) {
 	display:grid;
 	grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: .1fr 1fr;
-	/* height: 35em; */
 }
 
 main section:nth-of-type(4) h2 {
@@ -515,10 +493,6 @@ article:nth-of-type(1) ul li img {
     height: auto;
 }
 
-/* main section:nth-of-type(1) a {
-	padding-top: 10em;
-} */
-
 main section:nth-of-type(1) img {
 	width: 100%;
 	object-fit: cover;
@@ -537,12 +511,6 @@ main section:nth-of-type(4) {
 }
 
 @media (prefers-color-scheme:dark) and (min-width:52em) {
-
-	/* nav a img {
-		filter: invert(47%) sepia(71%) saturate(866%) 
-		hue-rotate(344deg) brightness(97%) contrast(97%);
-	} */
-
 	main section:nth-of-type(1) h2 {
 		background-color: var(--color-justmoretext);
 	}

@@ -23,22 +23,13 @@
     box-sizing:border-box;  
     font-family: "open noah";
   }
-  
-  
-  
-  
-/*********************/
-/* CUSTOM PROPERTIES */
-/*********************/
 
 /****************/
 /* JOUW STYLING */
 /****************/
 
-main {
-    margin-bottom: var(--whitespace);
-}
 
+/*article 1, taupe cowboy laars*/
 main article:first-of-type {
     border-bottom: solid var(--color-justmoretext);
     display: grid;
@@ -106,6 +97,10 @@ main article:first-of-type p:nth-of-type(2) {
     
 }
 
+/*eind article 1, taupe cowboy laars*/
+
+/*article 2, kleuren*/
+
 main article:nth-of-type(2) {
     display: grid;
     grid-template-columns: .5fr 1fr;
@@ -159,6 +154,10 @@ main article:nth-of-type(2) img {
     max-height: 11em;
 }
 
+/*Eind article 2, kleuren*/
+
+/*article 3, maten*/
+
 main article:nth-of-type(3) h2:first-of-type button {
     border: none;
     background: transparent;
@@ -185,6 +184,10 @@ main article:nth-of-type(3) > button {
 main article:nth-of-type(3) > button img {
     height: 1em;
 }
+
+/*eind article 3, maten*/
+
+/*section 1, winkelmandje*/
 
 main section:first-of-type {
     display: flex;
@@ -241,6 +244,10 @@ main section:first-of-type > button img {
             hue-rotate(344deg) brightness(97%) contrast(97%);
 }
 
+/*eind section 1, winkelmandje*/
+
+/*beschikbaarheid in jouw winkel*/
+
 main > a {
     display: flex;
 	border-radius: 10px;
@@ -269,6 +276,9 @@ main > a img {
             hue-rotate(344deg) brightness(97%) contrast(97%);
 }
 
+/*Eind beschikbaarheid in jouw winkel*/
+
+/*Section 2, checkmarks*/
 main section:nth-of-type(2) ul {
     padding-left: 0;
 }
@@ -277,14 +287,6 @@ main section:nth-of-type(2) h2 {
     display: none;
 }
 
-main section:nth-of-type(2) img {
-    margin: var(--whitespace);
-    height: 2em;
-    width: 2em;
-    filter: invert(66%) sepia(11%) saturate(2538%) 
-            hue-rotate(66deg) brightness(84%) contrast(75%);
-    
-}
 
 main section:nth-of-type(2) li {
     list-style: none;
@@ -294,10 +296,23 @@ main section:nth-of-type(2) li {
     border-left: solid var(--color-lines);   
 }
 
+main section:nth-of-type(2) img {
+    margin: var(--whitespace);
+    height: 2em;
+    width: 2em;
+    filter: invert(66%) sepia(11%) saturate(2538%) 
+            hue-rotate(66deg) brightness(84%) contrast(75%);
+    order: -1;
+    
+}
+
 main section:nth-of-type(2) li:last-of-type {
     border-bottom: solid var(--color-lines);
 }
 
+/*Eind section 2, checkmarks*/
+
+/*De dropdowns, 1*/
 /*Voor javascript dropdown menu-achtig*/
 main article:nth-of-type(4) ul {
     display: none;
@@ -354,7 +369,7 @@ main article:nth-of-type(4) p {
     margin: 0em calc( var(--whitespace) * 2) var(--whitespace) 0em;
 }
 
-
+/*De dropdowns, 2*/
 /*Voor javascript dropdown menu-achtig*/
 
 main article:nth-of-type(5){
@@ -407,7 +422,7 @@ main article:nth-of-type(5) p {
     margin: 0em calc( var(--whitespace) * 2) var(--whitespace) 0em;
 }
 
-
+/*De dropdowns, 3*/
 /*Voor javascript dropdown menu-achtig*/
 
 main article:nth-of-type(6) {
@@ -449,6 +464,11 @@ main article:nth-of-type(6) button > img {
     width: 2em;
 }
 
+main article:nth-of-type(6) li {
+    list-style: none;
+    display:flex;
+}
+
 main article:nth-of-type(6) img {
     margin-top:calc( var(--whitespace) * 0.5);
     margin-bottom:calc( var(--whitespace) * 0.5);
@@ -458,12 +478,9 @@ main article:nth-of-type(6) img {
             hue-rotate(66deg) brightness(84%) contrast(75%);
 }
 
-
-main article:nth-of-type(6) li {
-    list-style: none;
-    display:flex;
+main article:nth-of-type(6) li img {
+    order: -1;
 }
-
 
 @media (min-width:52em) {
     

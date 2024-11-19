@@ -53,7 +53,7 @@
         --color-morebackground:#f7f8f86e;
         --color-buttons:#f37022;
         --color-moretext: rgb(239, 174, 185);
-        --color-evenmoretext: purple;
+        --color-evenmoretext: rgb(228, 0, 228);
         --color-justmoretext: #bec3c4;
         --color-sale:#e84747;
         --color-lines:rgba(214, 214, 214, 0.641); 
@@ -69,71 +69,7 @@
 /* JOUW STYLING */
 /****************/
 
-@media (prefers-color-scheme:dark) {
-    header > ul:nth-of-type(1) li img {
-        filter: invert(47%) sepia(71%) saturate(866%) 
-            hue-rotate(344deg) brightness(97%) contrast(97%);
-    }
 
-    svg {
-        fill: var(--color-buttons);
-    }
-
-    nav > a img {
-		filter: invert(47%) sepia(71%) saturate(866%) 
-		hue-rotate(344deg) brightness(97%) contrast(97%);
-	}
-
-    header nav ul:nth-of-type(2) li img {
-        filter: invert(47%) sepia(71%) saturate(866%) 
-		hue-rotate(344deg) brightness(97%) contrast(97%); 
-    }
-
-    footer article:nth-of-type(2) img {
-        filter: invert(47%) sepia(71%) saturate(866%) 
-		hue-rotate(344deg) brightness(97%) contrast(97%);
-    }
-
-    footer article:nth-of-type(3) img {
-        filter: invert(47%) sepia(71%) saturate(866%) 
-		hue-rotate(344deg) brightness(97%) contrast(97%);
-    }
-
-    footer article:nth-of-type(4) img {
-        filter: invert(47%) sepia(71%) saturate(866%) 
-		hue-rotate(344deg) brightness(97%) contrast(97%);
-    }
-
-    footer article:nth-of-type(5) button img {
-        filter: invert(47%) sepia(71%) saturate(866%) 
-		hue-rotate(344deg) brightness(97%) contrast(97%); 
-    }
-
-    footer section:nth-of-type(2) img {
-        background-color: var(--color-text);
-        border-radius: 50%;
-        border: solid var(--color-text);
-    }
-
-    footer section:nth-of-type(1) ul:nth-of-type(3) li img {
-        background-color: var(--color-text);
-        border-radius: 5px;
-    }
-
-    footer > a img {
-        background-color: var(--color-text);
-        border: solid var(--color-text);
-    }
-
-    footer article:nth-of-type(5) button {
-        background-color: var(--color-morebackground);
-    }
-
-    footer article:nth-of-type(5) li{
-        background-color: var(--color-morebackground);
-    }
-
-}
 
 body {
     background-color: var(--color-background);
@@ -207,7 +143,7 @@ nav {
     background-color:var(--color-background);
     align-content:start;
     gap:var(--whitespace);
-    z-index: 1;
+    z-index: 2;
     width: 100%;
     position:fixed;
     left:0;
@@ -342,7 +278,7 @@ nav a img {
 
 h1 {
     margin:0;
-    z-index: 1;
+    z-index: 3;
 }
 
 h1 img {
@@ -383,7 +319,7 @@ header h1 {
 header ul:nth-of-type(2) {
     grid-area: zoeken;
     margin:var(--whitespace);
-    z-index: 2;
+    z-index: 3;
 }
 
 header ul:nth-of-type(2) input[type="text"] {
@@ -393,7 +329,7 @@ header ul:nth-of-type(2) input[type="text"] {
    
 header > ul:nth-of-type(1) {
     grid-area: icons;
-    z-index: 2;
+    z-index: 3;
 }
 
 /*Einde grid voor de header*/
@@ -489,13 +425,17 @@ header > ul:nth-of-type(1) {
 
 
 /* footer */
-
+footer article:nth-of-type(1) {
+    display: flex;
+    flex-direction: column;
+}
 
 footer article:first-of-type img {
     height: 24em;
     width: 100%;
     object-fit: cover;
     object-position: 40% 15%;
+    order: -1;
 }
 
 footer article:nth-of-type(1) h2 {
@@ -698,7 +638,10 @@ footer article:nth-of-type(5) img {
     width: 1em;
     height: auto;
     margin-left: 1em;
-    
+}
+
+footer article:nth-of-type(5) ul img {
+    order: -1;
 }
 
 footer > a img {
@@ -717,7 +660,6 @@ footer > a img {
 footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    /* grid-template-rows: 1fr .5r .5fr 1fr 1fr 1fr 1fr; */
     background-color: var(--color-lines);
     padding-bottom: 5em;
 }
@@ -784,7 +726,6 @@ footer > a {
 
 /*Eind grid voor de footer*/
 
-
 footer section:first-of-type ul:nth-of-type(1) li img {
     width: 3em;
     height: auto;
@@ -822,9 +763,6 @@ footer article:nth-of-type(2) button img {
     display: none;
 }
 
-/* footer article h2 button {
-    margin: 0;
-} */
 
 footer article:nth-of-type(3) button {
     border:none;
@@ -881,6 +819,73 @@ footer article:nth-of-type(5) button {
 
 }
 
+@media (prefers-color-scheme:dark) {
+    header > ul:nth-of-type(1) li img {
+        filter: invert(47%) sepia(71%) saturate(866%) 
+            hue-rotate(344deg) brightness(97%) contrast(97%);
+    }
+
+    svg {
+        fill: var(--color-buttons);
+    }
+
+    nav > a img {
+		filter: invert(47%) sepia(71%) saturate(866%) 
+		hue-rotate(344deg) brightness(97%) contrast(97%);
+	}
+
+    header nav ul:nth-of-type(2) li img {
+        filter: invert(47%) sepia(71%) saturate(866%) 
+		hue-rotate(344deg) brightness(97%) contrast(97%); 
+    }
+
+    footer article:nth-of-type(2) img {
+        filter: invert(47%) sepia(71%) saturate(866%) 
+		hue-rotate(344deg) brightness(97%) contrast(97%);
+    }
+
+    footer article:nth-of-type(3) img {
+        filter: invert(47%) sepia(71%) saturate(866%) 
+		hue-rotate(344deg) brightness(97%) contrast(97%);
+    }
+
+    footer article:nth-of-type(4) img {
+        filter: invert(47%) sepia(71%) saturate(866%) 
+		hue-rotate(344deg) brightness(97%) contrast(97%);
+    }
+
+    footer article:nth-of-type(5) button img {
+        filter: invert(47%) sepia(71%) saturate(866%) 
+		hue-rotate(344deg) brightness(97%) contrast(97%); 
+    }
+
+    footer section:nth-of-type(2) img {
+        background-color: var(--color-text);
+        border-radius: 50%;
+        border: solid var(--color-text);
+    }
+
+    footer section:nth-of-type(1) ul:nth-of-type(3) li img {
+        background-color: var(--color-text);
+        border-radius: 5px;
+    }
+
+    footer > a img {
+        background-color: var(--color-text);
+        border: solid var(--color-text);
+    }
+
+    footer article:nth-of-type(5) button {
+        background-color: var(--color-morebackground);
+    }
+
+    footer article:nth-of-type(5) li{
+        background-color: var(--color-morebackground);
+    }
+
+}
+
+
 /*focus*/
 header h1 a:focus {
     outline: solid var(--color-buttons);
@@ -917,3 +922,4 @@ footer section:nth-of-type(2) ul li a:focus-visible {
 footer a:focus-visible{
     outline: solid var(--color-buttons);
 }
+

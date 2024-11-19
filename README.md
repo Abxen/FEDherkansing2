@@ -297,7 +297,16 @@ Noah:
 </details>
 
 
-
+## herkansing
+  De aanpassingen die ik heb gemaakt: 
+  1. Ik heb de alt teksten uitgebreid
+  2. Ik heb het grid aangepast en heb hier minder met rare margins gewerkt
+  3. Ik heb kleine slordigheidsfoutjes eruit gehaald
+  4. Ik heb de image nu achter de teksten staan en heb hier met flexbox en order gewerkt
+  5. Ik heb focus states toegevoegd
+  6. Ik heb mijn tweede navigatie button werkend gemaakt
+  7. Ik heb ervoor gezorgd dat er op het grote scherm geklikt kan worden op de header
+  8. Ik heb gewerkt met een custom property voor whitespace
 
 
 ## Bronnenlijst
