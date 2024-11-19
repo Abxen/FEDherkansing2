@@ -141,8 +141,6 @@ main section:nth-of-type(3) ul {
 
 main section:nth-of-type(3) li {
 	flex-shrink:0;
-	/* display: flex;
-	flex-direction: column; */
 }
 
 main section:nth-of-type(3) ul li a {
