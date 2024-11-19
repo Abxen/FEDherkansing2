@@ -515,10 +515,12 @@ main section:nth-of-type(4) {
 
 	main section:nth-of-type(1) p {
 		background-color: var(--color-justmoretext);
+		color: var(--color-background);
 	}
 
 	main section:nth-of-type(1) a {
 		background-color: var(--color-justmoretext);
+		color: var(--color-background);
 	}
 
 }
